@@ -1,27 +1,8 @@
 extends _layouts/base
 
 block content
-  
-  section.header
-    header
-      .container
-        .row
-          .twelve.columns
-            nav.navigation
-              ul
-                li 
-                  
-                  a(href="#") Docs
-                    span.nav-icon
-                      extends _images/svg/document
-                li 
-                  a(href="#") Getting Started
-                    span.nav-icon
-                      extends _images/svg/flag
-                li 
-                  a(href="https://github.com/mxstbr/react-boilerplate") Github
-                    span.nav-icon
-                      extends _images/svg/github
+
+  include _layouts/header
 
   section.main
     .container
@@ -80,3 +61,6 @@ block content
             .card-body
               p 
                 | Redux makes actions composable, reduces the boilerplate code and makes hot–reloading possible in the first place. For a good overview of redux, check out the talk linked above or the official documentation!
+  
+  section.contributing
+    

@@ -1,14 +1,15 @@
 body {
 	font-family: 'Lato', sans-serif;
 	background-color: #fff;
+	min-height: 2000px;
 }
 
 h2 {
-	display: block;
+	display: inline-block;
 	margin: 25px auto 50px;
 	padding: 15px 0px;
 	border-bottom: 5px solid #3FC0AA;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 header {
@@ -17,13 +18,13 @@ header {
 }
 
 .navigation {
-	padding: 20px 0px;
+	padding: 10px 0px;
 	text-align: center;
 
 	.nav-icon {
 		display: inline-block;
 		float: left;
-		width: 29px;
+		width: 24px;
 		height: 1px;
 		margin-right: 5px;
 		vertical-align: middle;
@@ -45,7 +46,7 @@ header {
 				display: inline-block;
 				margin: 0px 15px;
 				padding: 10px 40px;
-				font-size: 1.8rem;
+				font-size: 1.6rem;
 				color: #434343;
 				text-decoration: none;
 				background: rgba(0,0,0,0);
@@ -61,7 +62,7 @@ header {
 	background-image:
 	    radial-gradient(
 	      #fff,
-	      #fafafa
+	      #F5F6FA
 	    );
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 
@@ -80,6 +81,8 @@ header {
 	background-color: #3FC0AA;
 	color: #fff;
 	font-size: 1.6rem;
+	border-right: 3px solid #47BDA9;
+	border-bottom: 3px solid #47BDA9;
 	transition: background-color 300ms ease;
 
 	background: #4ACEB7;
@@ -100,7 +103,9 @@ header {
 }
 
 .features {
-
+	padding: 30px 0px 50px;
+	background-color: #fff;
+	color: #434343;
 	.container {
 		padding: 25px;
 	}
@@ -108,16 +113,13 @@ header {
 
 .card {
 	margin-bottom: 40px;
-	box-shadow: 0px 3px 10px rgba(0,0,0,0.12);
+	box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
 
 	.card-header {
 		background-color: #fafafa;
-
-
 		background: #8e9eab; /* fallback for old browsers */
 		background: -webkit-linear-gradient(to top, #fafafa , #f9f9f9); /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to top, #fafafa , #f9f9f9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		        
 		border-bottom: 1px solid rgba(0,0,0,0.05);
 
 		h3 {
@@ -135,4 +137,10 @@ header {
 			color: rgba(0,0,0,0.6);
 		}
 	}
+}
+
+
+.contributing {
+	background-color: #BDF1E7;
+	min-height: 500px;
 }
