@@ -1,0 +1,117 @@
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: #fff;
+}
+
+h2 {
+	display: block;
+	margin: 25px auto 50px;
+	padding: 15px 0px;
+	border-bottom: 5px solid #3FC0AA;
+	font-weight: 400;
+}
+
+header {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+
+}
+
+.navigation {
+	padding: 20px 0px;
+	text-align: center;
+
+	ul {
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0;
+		li {
+			display: inline-block;
+			list-style: none;
+
+			a {
+				margin: 10px 20px;
+				padding: 25px 50px;
+				font-size: 1.8rem;
+				color: #434343;
+				text-decoration: none;
+				background: rgba(0,0,0,0);
+
+			}
+		}
+	}
+}
+
+.main {
+	padding: 150px 0px 200px;
+	background-image:
+	    radial-gradient(
+	      #fff,
+	      #fafafa
+	    );
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+
+}
+.main-header {
+	font-size: 6.5rem;
+	font-weight: 300;
+}
+
+.main-button {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 15px 50px;
+	border-radius: 50px;
+	text-decoration: none;
+	background-color: #3FC0AA;
+	color: #fff;
+	font-size: 1.6rem;
+	transition: background-color 300ms ease;
+
+	background: #4ACEB7;
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(1%, #4ACEB7), color-stop(100%, #3FC0AA));
+	background: -webkit-linear-gradient(-75deg, #4ACEB7 1%, #3FC0AA 100%);
+	background: -webkit-linear-gradient(315deg, #4ACEB7 1%, #3FC0AA 100%);
+	background: linear-gradient(135deg, #4ACEB7 1%, #3FC0AA 100%);
+
+	&:hover {
+		background-color: #4ACEB7;
+	}
+}
+
+.main-subtitle {
+	margin: 25px auto;
+	font-size: 1.8rem;
+	color: rgba(0,0,0,0.6);
+}
+
+.features {
+
+	.container {
+		padding: 25px;
+	}
+}
+
+.card {
+	margin-bottom: 40px;
+	box-shadow: 0px 3px 10px rgba(0,0,0,0.12);
+
+	.card-header {
+		background-color: #fafafa;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
+
+		h3 {
+			padding: 20px 0px;
+			margin: 0;
+		}
+	}
+	.card-body {
+		text-align: left;
+		padding: 18px 25px 8px;
+		min-height: 200px;
+		background-color: #fff;
+
+		p {
+			color: rgba(0,0,0,0.6);
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "React Boilerplate Site",
+      "htmlOption": "jade",
+      "jsPreprocessor": "es6",
+      "cssOption": "sass",
+      "sassSyntax": "scss",
+      "testFramework": "mocha"
+    },
+    "version": "1.5.0"
+  }
+}

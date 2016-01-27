@@ -1,0 +1,75 @@
+extends _layouts/base
+
+block content
+  
+  section.header
+    header
+      .container
+        .row
+          .twelve.columns
+            nav.navigation
+              ul
+                li 
+                  a(href="#") Docs
+                li 
+                  a(href="#") Getting Started
+                li 
+                  a(href="https://github.com/mxstbr/react-boilerplate") Github
+
+  section.main
+    .container
+      .row
+        .twelve.columns.center
+          h1.main-header React Boilerplate
+          p.main-subtitle Quick setup for new performance orientated, offline–first React.js applications
+          a(href='https://github.com/mxstbr/react-boilerplate/archive/master.zip').main-button Download Now
+
+  section.features
+    .container.center
+      .row
+        .twelve.columns
+          h2 Features
+      .row
+        .four.columns
+          .card
+            .card-header
+             h3 Redux
+            .card-body
+              p 
+                | Redux makes actions composable, reduces the boilerplate code and makes hot–reloading possible in the first place. For a good overview of redux, check out the talk linked above or the official documentation!
+        .four.columns
+          .card
+            .card-header
+             h3 Babel
+            .card-body
+              p 
+                | A modular JavaScript transpiler that helps to use next generation JavaScript and more, like transformation for JSX, hot loading, error catching etc. Babel has a solid ecosystem of offical preset and plugins.
+        .four.columns
+          .card
+            .card-header
+             h3 PostCSS
+            .card-body
+              p 
+                |  Like Sass, but modular and capable of much more. PostCSS is, in essence, just a wrapper for plugins which exposes an easy to use, but very powerful API.
+      .row
+        .four.columns
+          .card
+            .card-header
+             h3 Unit Tests
+            .card-body
+              p 
+                | Should be an important part of every web application developers toolchain. Mocha checks your application is working exactly how it should without you lifting a single finger.
+        .four.columns
+          .card
+            .card-header
+             h3 react-router
+            .card-body
+              p 
+                | react-router makes routing easy to do and takes care of most of the work. (except you have to define your routes yourself) You can find the documentation right here.
+        .four.columns
+          .card
+            .card-header
+             h3 ServiceWorker
+            .card-body
+              p 
+                | Redux makes actions composable, reduces the boilerplate code and makes hot–reloading possible in the first place. For a good overview of redux, check out the talk linked above or the official documentation!
