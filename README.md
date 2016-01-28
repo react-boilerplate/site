@@ -11,6 +11,12 @@ The beginnings of the site for React.js Boilerplate: https://github.com/mxstbr/r
 	> gulp serve
 ```
 
+## Building production files into /build
+
+```
+	> gulp --production
+```
+
 ### Tips & Subgenerator
 
 You can easily create new pages using the built-in sub-generator like so:

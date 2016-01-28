@@ -13,7 +13,13 @@ h2 {
 }
 
 header {
+	position: fixed;
+	top: 0;
+	left: 0;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
+	width: 100%;
+	background-color: #fff;
+	z-index: 10;
 
 }
 
@@ -58,7 +64,7 @@ header {
 }
 
 .main {
-	padding: 150px 0px 200px;
+	padding: 190px 0px 200px;
 	background-image:
 	    radial-gradient(
 	      #fff,
