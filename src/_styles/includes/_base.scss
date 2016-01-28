@@ -11,73 +11,19 @@ h2 {
 	border-bottom: 5px solid #3FC0AA;
 	font-weight: 300;
 }
-
-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	width: 100%;
-	background-color: #fff;
-	z-index: 10;
-
-}
-
-.navigation {
-	padding: 10px 0px;
-	text-align: center;
-
-	.nav-icon {
-		display: inline-block;
-		float: left;
-		width: 24px;
-		height: 1px;
-		margin-right: 5px;
-		vertical-align: middle;
-
-		svg {
-			fill: #676767;
-		}
-	}
-
-	ul {
-		display: inline-block;
-		margin: 0 auto;
-		padding: 0;
-		li {
-			display: inline-block;
-			list-style: none;
-
-			a {
-				display: inline-block;
-				margin: 0px 15px;
-				padding: 10px 40px;
-				font-size: 1.6rem;
-				color: #434343;
-				text-decoration: none;
-				background: rgba(0,0,0,0);
-				vertical-align: middle;
-
-			}
-		}
-	}
-}
-
 .main {
 	padding: 190px 0px 200px;
 	background-image:
-	    radial-gradient(
-	      #fff,
-	      #F5F6FA
-	    );
+	  radial-gradient(
+	    #fff,
+	    #F5F6FA
+	  );
 	border-bottom: 1px solid rgba(0,0,0,0.05);
-
 }
 .main-header {
 	font-size: 6.5rem;
 	font-weight: 300;
 }
-
 .main-button {
 	display: inline-block;
 	margin: 0 auto;
@@ -87,10 +33,9 @@ header {
 	background-color: #3FC0AA;
 	color: #fff;
 	font-size: 1.6rem;
-	border-right: 3px solid #47BDA9;
-	border-bottom: 3px solid #47BDA9;
+	border-right: 2px solid #47BDA9;
+	border-bottom: 2px solid #47BDA9;
 	transition: background-color 300ms ease;
-
 	background: #4ACEB7;
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(1%, #4ACEB7), color-stop(100%, #3FC0AA));
 	background: -webkit-linear-gradient(-75deg, #4ACEB7 1%, #3FC0AA 100%);
@@ -101,64 +46,8 @@ header {
 		background-color: #4ACEB7;
 	}
 }
-
 .main-subtitle {
 	margin: 25px auto;
 	font-size: 1.8rem;
 	color: rgba(0,0,0,0.6);
-}
-
-.features {
-	padding: 30px 0px 80px;
-	background-color: #fff;
-	color: #434343;
-	.container {
-		padding: 25px;
-	}
-}
-
-.card {
-	margin-bottom: 40px;
-	overflow: hidden;
-	border-radius: 4px;
-	background-color: #fff;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 5px 16px rgba(0, 0, 0, 0.06);
-
-	.card-header {
-		background-color: #fafafa;
-		background: #8e9eab; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to top, #fafafa , #f9f9f9); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to top, #fafafa , #f9f9f9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		border-bottom: 1px solid rgba(0,0,0,0.05);
-
-		h3 {
-			padding: 20px 0px;
-			margin: 0;
-		}
-	}
-	.card-body {
-		text-align: left;
-		padding: 18px 25px 8px;
-		min-height: 200px;
-		background-color: #fff;
-
-		p {
-			color: rgba(0,0,0,0.6);
-		}
-	}
-}
-
-
-.contributing {
-	background-color: #BDF1E7;
-	padding: 75px 0px 130px;
-
-	.cont-button {
-		margin: 25px auto 0px;
-	}
-}
-
-.footer {
-	padding: 25px 0px 0px;
-	color: rgba(0,0,0,0.3);
 }

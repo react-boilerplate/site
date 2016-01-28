@@ -1,9 +1,22 @@
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
 
+// Variables
 @import 'includes/variables';
+
+// Grid system
 @import 'includes/skeleton';
+
 @import 'includes/utils';
 @import 'includes/base';
+@import 'includes/cards';
+
+// Page sections
+@import 'includes/page-sections/header';
+@import 'includes/page-sections/features';
+@import 'includes/page-sections/contribute';
+@import 'includes/page-sections/footer';
+
+
 
 
