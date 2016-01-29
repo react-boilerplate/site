@@ -11,12 +11,13 @@ The beginnings of the site for React.js Boilerplate: https://github.com/mxstbr/r
 	gulp serve
 ```
 
-`/src` contains all necessary project files. 
+> Note: `/src` contains all necessary project files. 
 
-### Building production files into `/build`
+### Building production files into `/build` and deploying
 
 ```
 	gulp --production
+	npm run deploy
 ```
 
 ### Tips & Subgenerator
