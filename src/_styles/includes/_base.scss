@@ -4,6 +4,11 @@ body {
 	min-height: 2000px;
 }
 
+a {
+	color: #434343;
+	text-decoration: none;
+}
+
 h2 {
 	display: inline-block;
 	margin: 25px auto 50px;
@@ -11,43 +16,7 @@ h2 {
 	border-bottom: 5px solid #3FC0AA;
 	font-weight: 300;
 }
-.main {
-	padding: 190px 0px 200px;
-	background-image:
-	  radial-gradient(
-	    #fff,
-	    #F5F6FA
-	  );
-	border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-.main-header {
-	font-size: 6.5rem;
-	font-weight: 300;
-}
-.main-button {
-	display: inline-block;
-	margin: 0 auto;
-	padding: 15px 50px;
-	border-radius: 50px;
-	text-decoration: none;
-	background-color: #3FC0AA;
-	color: #fff;
-	font-size: 1.6rem;
-	border-right: 2px solid #47BDA9;
-	border-bottom: 2px solid #47BDA9;
-	transition: background-color 300ms ease;
-	background: #4ACEB7;
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(1%, #4ACEB7), color-stop(100%, #3FC0AA));
-	background: -webkit-linear-gradient(-75deg, #4ACEB7 1%, #3FC0AA 100%);
-	background: -webkit-linear-gradient(315deg, #4ACEB7 1%, #3FC0AA 100%);
-	background: linear-gradient(135deg, #4ACEB7 1%, #3FC0AA 100%);
 
-	&:hover {
-		background-color: #4ACEB7;
-	}
-}
-.main-subtitle {
-	margin: 25px auto;
-	font-size: 1.8rem;
-	color: rgba(0,0,0,0.6);
+section {
+	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
