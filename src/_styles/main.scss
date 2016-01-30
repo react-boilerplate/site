@@ -2,21 +2,22 @@
 @import 'node_modules/normalize.css/normalize';
 
 // Variables
-@import 'includes/variables';
+@import 'utils/variables';
 
 // Grid system
-@import 'includes/skeleton';
+@import 'vendor/skeleton';
 
-@import 'includes/utils';
-@import 'includes/base';
-@import 'includes/cards';
+@import 'utils/utils';
+@import 'page-sections/base';
+@import 'modules/cards';
 
 // Page sections
-@import 'includes/page-sections/navigation';
-@import 'includes/page-sections/hero';
-@import 'includes/page-sections/features';
-@import 'includes/page-sections/contribute';
-@import 'includes/page-sections/footer';
+@import 'page-sections/navigation';
+@import 'page-sections/hero';
+@import 'page-sections/features';
+@import 'page-sections/contribute';
+@import 'page-sections/getting-started';
+@import 'page-sections/footer';
 
 
 
