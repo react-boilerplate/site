@@ -11,6 +11,36 @@ block content
           h1.main-header React Boilerplate
           p.main-subtitle Quick setup for new performance orientated, offline–first React.js applications
           a(href='https://github.com/mxstbr/react-boilerplate/archive/master.zip').main-button Download Now
+  section.getting-started
+    .container
+      .row
+        .twelve.columns.center
+          h2 Getting Started
+      .row
+        .eight.columns.offset-by-two.code-setup
+          p 1. Clone the React Boilerplate repository if you haven't downloaded it.
+          input(
+            type='text'
+            value="git clone git@github.com:mxstbr/react-boilerplate"
+            onClick="this.select();"
+            readonly
+          )
+          p 2. Run npm run setup to initialize a new project
+          input(
+            type='text'
+            value="npm run setup"
+            onClick="this.select();"
+            readonly
+          )
+          p 3. Run npm start to start the local development environment.
+          input(
+            type='text'
+            value="npm start"
+            onClick="this.select();"
+            readonly
+          )
+          p Now you can go to http://localhost:3000 and see your app!
+
   section.features
     .container.center
       .row
