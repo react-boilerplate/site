@@ -1,13 +1,6 @@
-extends ../_layouts/base
-
-block config
-	//- Correct base url pathing for this page
-	- var baseUrl = '../'
-
+extends ../_layouts/navigation
 block content
-
-	include ../_layouts/header
-
+	include ../_layouts/navigation
 	section
 		.container
 			.row
@@ -23,6 +16,5 @@ block content
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere aut ipsam corrupti illum ab aliquid deserunt, esse quia voluptatem libero unde consequatur similique vitae velit, labore perferendis non explicabo ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nostrum dolorum expedita dolor, eum non odio, alias cum officia ut quis labore unde harum. Veritatis quaerat recusandae consequuntur, quia provident.
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere aut ipsam corrupti illum ab aliquid deserunt, esse quia voluptatem libero unde consequatur similique vitae velit, labore perferendis non explicabo ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nostrum dolorum expedita dolor, eum non odio, alias cum officia ut quis labore unde harum. Veritatis quaerat recusandae consequuntur, quia provident.
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere aut ipsam corrupti illum ab aliquid deserunt, esse quia voluptatem libero unde consequatur similique vitae velit, labore perferendis non explicabo ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nostrum dolorum expedita dolor, eum non odio, alias cum officia ut quis labore unde harum. Veritatis quaerat recusandae consequuntur, quia provident.
-				
 	include ../_layouts/contribute
 	include ../_layouts/footer

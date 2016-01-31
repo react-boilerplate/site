@@ -1,9 +1,6 @@
 extends _layouts/base
-
 block content
-
-  include _layouts/header
-
+  include _layouts/navigation
   section.main
     .container
       .row
@@ -40,7 +37,6 @@ block content
             readonly
           )
           p Now you can go to http://localhost:3000 and see your app!
-
   section.features
     .container.center
       .row
@@ -53,48 +49,41 @@ block content
               .card-header
                h3 Redux
               .card-body
-                p 
-                  | Redux makes actions composable, reduces the boilerplate code and makes hot–reloading possible in the first place. For a good overview of redux, check out the talk linked above or the official documentation!
+                p Redux makes actions composable, reduces the boilerplate code and makes hot–reloading possible in the first place. For a good overview of redux, check out the talk linked above or the official documentation!
         .four.columns
           a(href='https://babeljs.io/', target='_blank')
             .card
               .card-header
                h3 Babel
               .card-body
-                p 
-                  | A modular JavaScript transpiler that helps to use next generation JavaScript and more, like transformation for JSX, hot loading, error catching etc. Babel has a solid ecosystem of offical preset and plugins.
+                p A modular JavaScript transpiler that helps to use next generation JavaScript and more, like transformation for JSX, hot loading, error catching etc. Babel has a solid ecosystem of offical preset and plugins.
         .four.columns
           a(href='https://github.com/postcss/postcss', target='_blank')
             .card
               .card-header
                h3 PostCSS
               .card-body
-                p 
-                  |  Like Sass, but modular and capable of much more. PostCSS is, in essence, just a wrapper for plugins which exposes an easy to use, but very powerful API.
+                p Like Sass, but modular and capable of much more. PostCSS is, in essence, just a wrapper for plugins which exposes an easy to use, but very powerful API.
       .row
         .four.columns
           .card
             .card-header
              h3 Unit Tests
             .card-body
-              p 
-                | Should be an important part of every web application developers toolchain. Mocha checks your application is working exactly how it should without you lifting a single finger.
+              p Should be an important part of every web application developers toolchain. Mocha checks your application is working exactly how it should without you lifting a single finger.
         .four.columns
           a(href='https://github.com/rackt/react-router', target='_blank')
             .card
               .card-header
                h3 react-router
               .card-body
-                p 
-                  | react-router makes routing easy to do and takes care of most of the work. (except you have to define your routes yourself) You can find the documentation right here.
+                p react-router makes routing easy to do and takes care of most of the work. (except you have to define your routes yourself) You can find the documentation right here.
         .four.columns
           a(href='http://www.html5rocks.com/en/tutorials/service-worker/introduction/', target='_blank')
             .card
               .card-header
                h3 ServiceWorker
               .card-body
-                p 
-                  | As soon as the website has been opened once, it is cached and available without a network connection. See this talk for an explanation of the ServiceWorker used in this boilerplate.
-                  
+                p As soon as the website has been opened once, it is cached and available without a network connection. See this talk for an explanation of the ServiceWorker used in this boilerplate.
   include _layouts/contribute
   include _layouts/footer
