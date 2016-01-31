@@ -5,6 +5,12 @@
 	    #fafafa,
 	    #D2F3EC
 	  );
+	@media screen and (max-width: 720px) {
+    padding: 40px 0px 100px;
+	}
+	@media screen and (max-width: 480px) {
+    padding: 20px 0px 50px;
+	}
 	.code-setup {
 		padding: 30px 50px 40px;
 		color: #2795EE;
@@ -15,11 +21,15 @@
 		-webkit-transition: box-shadow 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 		-moz-transition: box-shadow 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 		transition: box-shadow 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+		@media screen and (max-width: 720px) {
+	    padding: 20px 30px 40px;
+		}
 	
 		p {
 			margin: 25px 0px 10px;
 			color: #A0A1A7;
-			font-size: 1.5rem;
+			font-size: 15px;
 		}
 
 		input {

@@ -21,6 +21,10 @@ header {
 		margin-right: 5px;
 		vertical-align: middle;
 
+		@media screen and (max-width: 480px) {
+	    margin-right: 2px;
+		}
+
 		svg {
 			fill: #676767;
 		}
@@ -44,6 +48,13 @@ header {
 				text-decoration: none;
 				background: rgba(0,0,0,0);
 				vertical-align: middle;
+
+				@media screen and (max-width: 720px) {
+			    padding: 7px 10px;
+				}
+				@media screen and (max-width: 480px) {
+			    padding: 7px 5px;
+				}
 			}
 		}
 	}
