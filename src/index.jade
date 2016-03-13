@@ -5,7 +5,7 @@ block content
     .container
       .row
         .twelve.columns.center
-          h1.main-header React Boilerplate
+          img(src="/images/svg/react-boilerplate-logo-white.svg", alt="React Boilerplate logo")
           p.main-subtitle Quick setup for new performance orientated, offline–first React.js applications
           a(href='https://github.com/mxstbr/react-boilerplate/archive/master.zip').main-button Download Now
   section.getting-started
@@ -29,14 +29,20 @@ block content
             onClick="this.select();"
             readonly
           )
-          p 3. Run npm start to start the local development environment.
+          p 3. Run npm start to see the example app at http://localhost:3000
           input(
             type='text'
             value="npm start"
             onClick="this.select();"
             readonly
           )
-          p Now you can go to http://localhost:3000 and see your app!
+          p Run npm run clean to delete the example app.
+          input(
+            type='text'
+            value="npm run clean"
+            onClick="this.select();"
+            readonly
+          )
   section.features
     .container.center
       .row
