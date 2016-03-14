@@ -16,11 +16,12 @@
   <meta name="og:type" content="website">
   <meta name="og:url" content="http://reactboilerplate.com/">
   <meta name="og:description" content="Quick setup for new performance orientated, offline–first React.js applications featuring Redux, hot–reloading, PostCSS, react-router, ServiceWorker, AppCache, FontFaceObserver and Mocha.">
+  <meta name="og:image" content="http://www.reactboilerplate.com/images/reactboilerplate-screenshot.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="http://reactboilerplate.com/">
   <meta name="twitter:title" content="React Boilerplate">
   <meta name="twitter:description" content="Quick setup for new performance orientated, offline–first React.js applications featuring Redux, hot–reloading, PostCSS, react-router, ServiceWorker, AppCache, FontFaceObserver and Mocha.">
-  <meta name="twitter:image" content="/images/reactboilerplate-screenshot.png">
+  <meta name="twitter:image" content="http://www.reactboilerplate.com/images/reactboilerplate-screenshot.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
   <link rel="stylesheet" href="./styles/main.css">
   <script>
@@ -56,8 +57,7 @@
   <section class="main">
     <div class="container">
       <div class="row">
-        <div class="twelve columns center">
-          <h1 class="main-header">React Boilerplate</h1>
+        <div class="twelve columns center"><img src="/images/svg/react-boilerplate-logo-white.svg" alt="React Boilerplate logo">
           <p class="main-subtitle">Quick setup for new performance orientated, offline–first React.js applications</p><a href="https://github.com/mxstbr/react-boilerplate/archive/master.zip" class="main-button">Download Now</a>
         </div>
       </div>
@@ -76,9 +76,10 @@
           <input value="git clone git@github.com:mxstbr/react-boilerplate" onclick="this.select()" readonly>
           <p>2. Run npm run setup to initialize a new project</p>
           <input value="npm run setup" onclick="this.select()" readonly>
-          <p>3. Run npm start to start the local development environment.</p>
+          <p>3. Run npm start to see the example app at http://localhost:3000</p>
           <input value="npm start" onclick="this.select()" readonly>
-          <p>Now you can go to http://localhost:3000 and see your app!</p>
+          <p>Run npm run clean to delete the example app.</p>
+          <input value="npm run clean" onclick="this.select()" readonly>
         </div>
       </div>
     </div>
