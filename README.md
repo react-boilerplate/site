@@ -1,39 +1,100 @@
-# React.js Boilerplate Site
+<img src="https://raw.githubusercontent.com/mxstbr/react-boilerplate-brand/master/assets/banner-metal.jpg" alt="react boilerplate banner" align="center" />
 
-The beginnings of the site for React.js Boilerplate: https://github.com/mxstbr/react-boilerplate
+<br />
 
-## Getting Started
+<div align="center"><strong>Start your next react project in seconds</strong></div>
+<div align="center">A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</div>
 
-```
-	git clone https://github.com/brotzky/react-boilerplate-site.git
-	cd react-boilerplate-site
-	npm install
-	gulp serve
-```
+<br />
 
-> Note: `/src` contains all necessary project files. 
+<div align="center">
+  <!-- Dependency Status -->
+  <a href="https://david-dm.org/mxstbr/react-boilerplate/v3.0.0">
+    <img src="https://david-dm.org/mxstbr/react-boilerplate/v3.0.0.svg" alt="Dependency Status" />
+  </a>
+  <!-- devDependency Status -->
+  <a href="https://david-dm.org/mxstbr/react-boilerplate/v3.0.0#info=devDependencies">
+    <img src="https://david-dm.org/mxstbr/react-boilerplate/v3.0.0/dev-status.svg" alt="devDependency Status" />
+  </a>
+  <!-- Build Status -->
+  <a href="https://travis-ci.org/mxstbr/react-boilerplate?branch=v3.0.0">
+    <img src="https://travis-ci.org/mxstbr/react-boilerplate.svg?branch=v3.0.0" alt="Build Status" />
+  </a>
+  <!-- Test Coverage -->
+  <a href="https://coveralls.io/r/mxstbr/react-boilerplate?branch=v3.0.0">
+    <img src="https://coveralls.io/repos/github/mxstbr/react-boilerplate/badge.svg?branch=v3.0.0" alt="Test Coverage" />
+  </a>
+  <!-- Donations -->
+  <a href="https://cash.me/$mxstbr">
+    <img src="https://img.shields.io/badge/square-donate-yellow.svg" alt="Donate with Square Cash" />
+  </a>
+</div>
 
-### Building production files into `/build` and deploying
+<br />
 
-```
-	gulp --production
-	npm run deploy
-```
+<div align="center">
+  <sub>Made with ❤︎ by <a href="https://twitter.com/mxstbr">Max Stoiber</a> and <a href="https://github.com/mxstbr/react-boilerplate/graphs/contributors">contributors</a>. <i>If you're using this boilerplate, we'd love to <a href="https://github.com/mxstbr/react-boilerplate/issues/115">hear from you</a>!</i></sub>
+</div>
 
-### Tips & Subgenerator
+## Features
 
-You can easily create new pages using the built-in sub-generator like so:
+<dl>
+  <dt>Quick scaffolding</dt>
+  <dd>Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!</dd>
 
-```
-	yo yeogurt:page about
-```
+  <dt>Instant feedback</dt>
+  <dd>Enjoy the best DX and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
 
-This will create the structure you saw above:
+  <dt>Predictable state management</dt>
+  <dd>Unidirectional data flow allows for change logging and time travel debugging.</dd>
 
-```
-└── src
-    └── about
-        └── index.{jade,nunjucks}
-```
+  <dt>Next generation JavaScript</dt>
+  <dd>Use template strings, object destructuring, arrow functions, JSX syntax and more, today.</dd>
 
-So when you boot up your site and go to `/about` you will see your new page.
+  <dt>Next generation CSS</dt>
+  <dd>Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</dd>
+
+  <dt>Industry-standard routing</dt>
+  <dd>It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</dd>
+
+  <dt>Offline-first</dt>
+  <dd>The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</dd>
+</dl>
+
+But wait... there's more!
+
+  - *The best test setup:* Automatically guarantee code quality and non-breaking
+    changes. (Seen a react app with 99% test coverage before?)
+  - *Native web app:* Your app's new home? The homescreen of your users' phones.
+  - *The fastest fonts:* Say goodbye to vacant text.
+  - *Stay fast*: Profile your app's performance from the comfort of your command
+    line!
+
+## Quick start
+
+1. Clone this repo using `$ git clone git@github.com:mxstbr/react-boilerplate`.
+1. Run `$ npm run setup` to install dependencies and clean the git repo.<br />
+   *At this point you can run `$ npm start` to see the example app at `http://localhost:3000`.*
+1. Run `$ npm run clean` to delete the example app.
+
+Now you're ready to rumble!
+
+## Documentation
+
+- [Intro](docs/general): What's included and why
+- [Commands](docs/general/commands.md): Getting the most out of this boilerplate
+- [Testing](docs/testing): How to work with the built-in test harness
+- [Styling](docs/css): How to work with the CSS tooling
+- [Your app](docs/js): Supercharging your app with Routing, Redux, simple
+  asynchronicity helpers, etc.
+
+## License
+
+This project is licensed under the MIT license, Copyright (c) 2016 Maximilian
+Stoiber. For more information see `LICENSE.md`.
+
+## Donate
+
+This project is a labor of love. I ([Max](https://twitter.com/mxstbr)) have
+spent a lot of time building and maintaining react-boilerplate, and if you're
+using it I'd be immensely grateful for [a donation](https://cash.me/$mxstbr).
