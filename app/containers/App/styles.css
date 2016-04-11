@@ -1,5 +1,14 @@
 /* Global styles */
 
+:global(:root) {
+  --brown: #715c57;
+  --blue: #7d93aa;
+  --light-blue: #dae6f1;
+  --red: #d77158;
+  --light-red: #f0af9f;
+  --white: #fafcff;
+}
+
 html,
 body {
   height: 100%;
@@ -7,36 +16,19 @@ body {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Tisa Sans Pro';
 }
 
-body.fontLoaded {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-:global(#app) {
-  background-color: #FAFAFA;
+:global #app {
+  background-color: var(--white);
+  color: var(--brown);
   min-height: 100%;
   min-width: 100%;
 }
 
 .wrapper {
-  max-width: calc(768px + 16px * 2);
   margin: 0 auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   min-height: 100%;
-  padding: 0 16px;
   flex-direction: column;
-}
-
-.logoWrapper {
-  padding: 2em 0;
-}
-
-.logo {
-  width: 100%;
-  margin: 0 auto;
-  display: block;
 }

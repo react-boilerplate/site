@@ -1,42 +1,36 @@
-.textSection {
-  margin: 3em auto;
+.homePage {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.textSection:first-child {
-  margin-top: 0;
-}
-
-.centered {
+.header {
+  background-color: var(--light-blue);
+  padding: 5rem;
   text-align: center;
+  color: var(--blue);
 }
 
-p,
-label {
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  line-height: 1.5em;
+.header h1 {
+  font-family: 'Futura PT';
+  font-weight: normal;
+  font-size: 3rem;
+  color: var(--brown);
 }
 
-.link {
-  text-decoration: none;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem;
 }
 
-.code {
-  font-size: 0.75em;
-  background-color: $very-light-grey;
-  padding: 0.125em 0.5em;
-  border-radius: 1px;
+.content {
+  padding: 3rem 2rem;
+  flex-grow: 1;
 }
 
-.usernameForm {
-  margin-bottom: 1em;
-}
-
-.input {
-  outline: none;
-  border-bottom: 1px dotted #999;
-}
-
-.atPrefix {
-  color: black;
-  margin-left: 0.4em;
+.content, .nav {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 .75rem rgba(0, 0, 0, .2);
 }
