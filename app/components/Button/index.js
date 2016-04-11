@@ -11,24 +11,29 @@ import React from 'react';
 import styles from './styles.css';
 
 function Button(props) {
-  let className = styles.button;
+  const className = props.className ? props.className : styles.button;
 
-  if (props.className) {
-    className = props.className
-  } else if (props.outlined) {
-    className = styles.outlined
+  // Render an anchor tag
+  let button = (
+    <a className={className} href={props.href} onClick={props.onClick}>{props.children}</a>
+  );
+
+  // If the Button has a handleRoute prop, we want to render a button
+  if (props.handleRoute) {
+    button = (
+      <button className={className} onClick={ props.handleRoute } >{props.children}</button>
+    );
   }
 
-  return props.handleRoute ?
-    // If the Button has a handleRoute prop, we want to render a button
-    <button className={className} onClick={ props.handleRoute }>{props.children}</button> :
-    // Render an anchor tag
-    <a className={className} href={props.href} onClick={props.onClick}>{props.children}</a>
+  return (
+    <div className={ styles.buttonWrapper }>
+      { button }
+    </div>
+  );
 }
 
 Button.propTypes = {
   className: React.PropTypes.string,
-  outline: React.PropTypes.bool,
   handleRoute: React.PropTypes.func,
   href: React.PropTypes.string,
   onClick: React.PropTypes.func,

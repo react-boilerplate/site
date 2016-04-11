@@ -8,10 +8,30 @@
 
 import React from 'react';
 
+import Img from 'Img';
+import Footer from 'Footer';
+import Banner from './banner-metal.jpg';
+import A from 'A';
+
 import styles from './styles.css';
 
 function App(props) {
-  return props.children;
+  return (
+    <div className={ styles.wrapper }>
+      <A
+        className={ styles.logoWrapper }
+        href="https://twitter.com/mxstbr"
+      >
+        <Img
+          className={ styles.logo }
+          src={ Banner }
+          alt="react-boilerplate - Logo"
+        />
+      </A>
+      { props.children }
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
