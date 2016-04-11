@@ -15,19 +15,14 @@ import reposSelector from 'reposSelector';
 import loadingSelector from 'loadingSelector';
 import errorSelector from 'errorSelector';
 
-import {
-  changeUsername,
-} from './actions';
-
-import {
-  loadRepos,
-} from '../App/actions';
+import { changeUsername } from './actions';
+import { loadRepos } from '../App/actions';
 
 import Button from 'Button';
 import H2 from 'H2';
 import List from 'List';
 import ListItem from 'ListItem';
-import RepoListItem from 'RepoListItem';
+import GettingStarted from 'GettingStarted';
 import LoadingIndicator from 'LoadingIndicator';
 
 import styles from './styles.css';
@@ -71,31 +66,20 @@ export class HomePage extends React.Component {
     }
 
     return (
-      <article>
-        <div>
-          <section className={ styles.textSection + ' ' + styles.centered }>
-            <H2>Start your next react project in seconds</H2>
-            <p>A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</p>
-          </section>
-          <section className={ styles.textSection }>
-            <H2>Try me!</H2>
-              <form className={ styles.usernameForm } onSubmit={ this.props.onSubmitForm }>
-                <label>Show Github repositories by
-                  <span className={ styles.atPrefix }>@</span>
-                  <input
-                    className={ styles.input }
-                    type="text"
-                    placeholder="mxstbr"
-                    value={ this.props.username }
-                    onChange={ this.props.onChangeUsername }
-                  />
-                </label>
-              </form>
-              { mainContent }
-          </section>
-          <Button handleRoute={ this.openFeaturesPage }>Features</Button>
-        </div>
-      </article>
+      <main className={ styles.homePage }>
+        <nav className={ styles.nav } >
+          <Button outlined>Source</Button>
+          <Button>Download</Button>
+          <Button outlined>Docs</Button>
+        </nav>
+        <header className={ styles.header }>
+          <h1>React Boilerplate</h1>
+          <p>Quick setup for new performance orientated, offline–first React.js applications</p>
+        </header>
+        <article className={ styles.content }>
+          <GettingStarted />
+        </article>
+      </main>
     );
   }
 }
