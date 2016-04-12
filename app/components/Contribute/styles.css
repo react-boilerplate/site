@@ -1,0 +1,19 @@
+.contribute {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--light-blue);
+}
+
+.contribute h2 {
+  color: var(--red);
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'Futura PT';
+  margin-bottom: 1rem;
+}
+
+.contribute p {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}

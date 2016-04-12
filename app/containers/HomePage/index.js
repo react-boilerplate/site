@@ -23,6 +23,8 @@ import H2 from 'H2';
 import List from 'List';
 import ListItem from 'ListItem';
 import GettingStarted from 'GettingStarted';
+import Features from 'Features';
+import Contribute from 'Contribute';
 import LoadingIndicator from 'LoadingIndicator';
 
 import styles from './styles.css';
@@ -78,7 +80,9 @@ export class HomePage extends React.Component {
         </header>
         <article className={ styles.content }>
           <GettingStarted />
+          <Features />
         </article>
+        <Contribute />
       </main>
     );
   }
