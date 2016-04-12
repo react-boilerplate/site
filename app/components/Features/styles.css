@@ -1,0 +1,48 @@
+.features {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.features h2 {
+  display: flex;
+  align-items: center;
+  color: var(--red);
+  width: 100%;
+  text-align: center;
+  font-family: 'Futura PT';
+  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.features h2:after,
+.features h2:before
+{
+  display: block;
+  content: '';
+  flex-grow: 1;
+  height: .15rem;
+  background-color: var(--light-red);
+}
+
+.features h2:before { margin-right: 1rem; }
+.features h2:after { margin-left: 1rem; }
+
+.features section {
+  width: calc(50% - .5rem);
+  margin-bottom: 1rem;
+}
+
+.features h3 {
+  color: var(--blue);
+  font-size: 1.3rem;
+  font-family: 'Futura PT';
+  font-weight: normal;
+  margin-bottom: .75rem;
+}
+
+.features p {
+  font-size: .9rem;
+}

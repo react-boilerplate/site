@@ -63,7 +63,7 @@ const rootRoute = {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={useScroll(() => history)()} routes={rootRoute} />
+    <Router history={history} routes={rootRoute} />
   </Provider>,
   document.getElementById('app')
 );
