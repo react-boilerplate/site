@@ -16,6 +16,8 @@
 
 svg {
   margin-bottom: 2rem;
+  fill: var(--brown);
+  height: 5rem;
 }
 
 .nav {
