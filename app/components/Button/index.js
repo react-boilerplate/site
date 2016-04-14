@@ -11,12 +11,12 @@ import React from 'react';
 import styles from './styles.css';
 
 function Button(props) {
-  let className = styles.button;
+  let className = styles['button--default'];
 
   if (props.className) {
     className = props.className
   } else if (props.outlined) {
-    className = styles.outlined
+    className = styles['button--outlined']
   }
 
   return props.handleRoute ?
