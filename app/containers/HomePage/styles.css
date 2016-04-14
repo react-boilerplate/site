@@ -6,6 +6,7 @@
 
 .header {
   padding: 5rem;
+  font-size: 1.2rem;
   text-align: center;
   color: var(--blue);
   background: linear-gradient(to top, var(--light-blue), var(--white));
@@ -13,11 +14,8 @@
               inset 0 -.75rem .75rem -.75rem rgba(0, 0, 0, .2);
 }
 
-.header h1 {
-  font-family: 'Futura PT';
-  font-weight: normal;
-  font-size: 3rem;
-  color: var(--brown);
+svg {
+  margin-bottom: 2rem;
 }
 
 .nav {

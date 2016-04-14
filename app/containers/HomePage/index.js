@@ -26,6 +26,7 @@ import GettingStarted from 'GettingStarted';
 import Features from 'Features';
 import Contribute from 'Contribute';
 import LoadingIndicator from 'LoadingIndicator';
+import Logo from './react-boilerplate-logo.svg'
 
 import styles from './styles.css';
 
@@ -75,7 +76,7 @@ export class HomePage extends React.Component {
           <Button outlined>Docs</Button>
         </nav>
         <header className={ styles.header }>
-          <h1>React Boilerplate</h1>
+          <Logo />
           <p>Quick setup for new performance orientated, offline–first React.js applications</p>
         </header>
         <article className={ styles.content }>

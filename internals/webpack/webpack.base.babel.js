@@ -35,6 +35,10 @@ module.exports = (options) => ({
       test: /\.jpe?g$|\.gif$|\.png$/i,
       loader: 'url-loader?limit=10000',
     }, {
+      test: /\.svg$/i,
+      exclude: /node_modules/,
+      loader: 'babel!react-svg-loader',
+    }, {
       test: /\.html$/,
       loader: 'html-loader',
     }],
