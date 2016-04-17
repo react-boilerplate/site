@@ -20,6 +20,7 @@ import { loadRepos } from '../App/actions';
 
 import Button from 'Button';
 import H2 from 'H2';
+import Icon from 'Icon';
 import List from 'List';
 import ListItem from 'ListItem';
 import GettingStarted from 'GettingStarted';
@@ -71,9 +72,9 @@ export class HomePage extends React.Component {
     return (
       <main className={ styles.homePage }>
         <nav className={ styles.nav } >
-          <Button outlined>Source</Button>
-          <Button>Download</Button>
-          <Button outlined>Docs</Button>
+          <Button outlined icon='github-logo'>Source</Button>
+          <Button icon='download'>Download</Button>
+          <Button outlined icon='book'>Docs</Button>
         </nav>
         <header className={ styles.header }>
           <Logo />

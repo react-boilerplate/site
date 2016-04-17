@@ -36,13 +36,21 @@
 }
 
 .features h3 {
+  display: flex;
+  align-items: center;
   color: var(--blue);
   font-size: 1.3rem;
   font-family: 'Futura PT';
   font-weight: normal;
   margin-bottom: .75rem;
+  margin-top: 1rem;
 }
 
 .features p {
   font-size: .9rem;
+}
+
+.icon {
+  color: var(--red);
+  margin-right: .75rem;
 }

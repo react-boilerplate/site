@@ -9,6 +9,7 @@
 import React from 'react';
 
 import styles from './styles.css';
+import Icon from 'Icon'
 
 function Button(props) {
   let className = styles['button--default'];
@@ -19,11 +20,13 @@ function Button(props) {
     className = styles['button--outlined']
   }
 
+  let icon = props.icon ? <Icon type={props.icon} className={styles.icon}/> : null
+
   return props.handleRoute ?
     // If the Button has a handleRoute prop, we want to render a button
-    <button className={className} onClick={ props.handleRoute }>{props.children}</button> :
+    <button className={className} onClick={ props.handleRoute }>{icon}{props.children}</button> :
     // Render an anchor tag
-    <a className={className} href={props.href} onClick={props.onClick}>{props.children}</a>
+    <a className={className} href={props.href} onClick={props.onClick}>{icon}{props.children}</a>
 }
 
 Button.propTypes = {

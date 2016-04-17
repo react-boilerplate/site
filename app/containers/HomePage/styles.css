@@ -14,11 +14,12 @@
               inset 0 -.75rem .75rem -.75rem rgba(0, 0, 0, .2);
 }
 
-svg {
+.header svg {
   margin-bottom: 2rem;
   fill: var(--brown);
   height: 5rem;
 }
+
 
 .nav {
   display: flex;

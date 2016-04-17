@@ -1,6 +1,8 @@
 .button {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 2em;
   height: 2em;
   white-space: nowrap;
@@ -37,6 +39,12 @@
     color: var(--white);
     background-color: var(--red);
   }
+}
+
+.icon {
+  padding: .1em;
+  margin-left: -1.7em;
+  margin-right: 1em;
 }
 
 
