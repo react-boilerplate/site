@@ -17,7 +17,7 @@ function Features() {
 
       <section>
         <h3><Icon type="ram" className={ styles.icon }/>Predictable State</h3>
-        <p>Use Redux to take control of your application's state and keep state mutations manageable. If you have it, the boilerplate works with the Chrome Redux DevTools extension to allow you to see, play back, and change your action history!</p>
+        <p>Use Redux to take control of your application’s state and keep state mutations manageable. If you have it, the boilerplate works with the Chrome Redux DevTools extension to allow you to see, play back, and change your action history!</p>
       </section>
 
       <section>
@@ -32,12 +32,12 @@ function Features() {
 
       <section>
         <h3><Icon type="design-mug" className={ styles.icon }/> Next Generation CSS</h3>
-        <p>Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</p>
+        <p>Write composable CSS that’s co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</p>
       </section>
 
       <section>
         <h3><Icon type="flowchart" className={ styles.icon }/> Industry-standard routing</h3>
-        <p>It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</p>
+        <p>It’s natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</p>
       </section>
 
       <section>
