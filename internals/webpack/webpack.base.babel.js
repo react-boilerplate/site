@@ -32,15 +32,11 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
-      test: /\.jpe?g$|\.gif$|\.png$/i,
+      test: /\.jpe?g$|\.gif$|\.png$|\.svgo?\?data-uri$/,
       loader: 'url-loader?limit=10000',
     }, {
-      test:   /\.svg\?data-uri/i,
-      include: /app/,
-      loader: 'url?limit=100000&mimetype=image/svg+xml'
-    }, {
-      test: /\.svg$/i,
-      include: /app/,
+      test: /\.svg$/,
+      exclude: /node_modules/,
       loader: 'babel!react-svg-loader',
     }, {
       test: /\.html$/,
