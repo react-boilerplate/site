@@ -53,7 +53,7 @@ module.exports = (options) => ({
   postcss: () => options.postcssPlugins,
   resolve: {
     modulesDirectories: [
-      'containers',
+      'pages',
       'components',
       'selectors',
       'sagas',
