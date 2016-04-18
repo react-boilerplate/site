@@ -10,6 +10,43 @@ body {
   font-family: 'Tisa Sans Pro';
 }
 
+/*
+ * Viewport-based Layout growth
+ *
+ * There's a lot going on here but in general the layout follows a few set of
+ * rules:
+ *
+ * 1. The root's font-size will not shrink below the $base-font-size
+ * 2. The font-size will grow with the viewport as long as the aspect-ratio is
+ *    maintained.
+ * 3. This growth effect is reduced by the $growth-scaler so that extra
+ *    screen-space is still valuable and ctrl+ and ctrl- still work.
+ */
+
+/* with a default font-size of 16px allow a minimum readable font-size of 13px */
+$base-font-size: 0.8125rem;
+$aspect-width: 50;
+$aspect-height: 40;
+$aspect-ratio: $aspect-width/$aspect-height;
+$growth-scaler: 0.3;
+$min-growth-width: calc($base-font-size * $aspect-width);
+$min-growth-height: calc($base-font-size * $aspect-height);
+
+:root {
+  font-size: $base-font-size;
+  /* min-width: $min-growth-width; */
+  /* min-height: $min-growth-height; */
+
+  @media (min-width: $min-growth-width) and (min-height: $min-growth-height) {
+    @media (max-aspect-ratio: $aspect-ratio) {
+      font-size: calc($base-font-size + ((calc(100vw / $aspect-width) - $base-font-size) * $growth-scaler));
+    }
+    @media (min-aspect-ratio: $aspect-ratio) {
+      font-size: calc($base-font-size + ((calc(100vh / $aspect-height) - $base-font-size) * $growth-scaler));
+    }
+  }
+}
+
 :global #app {
   background-color: var(--white);
   color: var(--brown);
