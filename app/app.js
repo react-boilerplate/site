@@ -46,9 +46,17 @@ const store = configureStore(initialState, browserHistory);
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
-import selectLocationSelector from 'selectLocationSelector';
+let prevRoutingState;
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: selectLocationSelector,
+  selectLocationState: (state) => {
+    const routingState = state.get('route');
+
+    if (!routingState.equals(prevRoutingState)) {
+      prevRoutingState = routingState;
+    }
+
+    return prevRoutingState.toJS();
+  },
 });
 
 // Set up the router, wrapping all Routes in the App component
