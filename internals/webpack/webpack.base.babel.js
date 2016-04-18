@@ -33,7 +33,7 @@ module.exports = (options) => ({
       loaders: ['style-loader', 'css-loader'],
     }, {
       test: /\.jpe?g$|\.gif$|\.png$|\.svgo?\?data-uri$/,
-      loader: 'url-loader?limit=10000',
+      loader: 'url-loader',
     }, {
       test: /\.svg$/,
       exclude: /node_modules/,
