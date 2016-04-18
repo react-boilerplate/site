@@ -18,8 +18,7 @@
 }
 
 .features h2:after,
-.features h2:before
-{
+.features h2:before {
   display: block;
   content: '';
   flex-grow: 1;
@@ -53,4 +52,12 @@
 .icon {
   color: var(--red);
   margin-right: .75rem;
+}
+
+@media (max-width: 700px) {
+  .features section {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
