@@ -1,8 +1,6 @@
 .button {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 2em;
   height: 2em;
   white-space: nowrap;
@@ -16,16 +14,16 @@
   transition: background-color 200ms ease-out, box-shadow 100ms ease-out;
 
   &:active {
-    box-shadow: inset 0 0 0 .15rem var(--light-red),
-                inset 1rem .15rem 0 0 rgba(0,0,0,.1);
-    text-shadow: .2rem 0 0 rgba(0,0,0,.1);
+    box-shadow: inset 0 0 0 .15em var(--light-red),
+                inset .5em .15em 0 0 rgba(0,0,0,.1);
+    text-shadow: .2em 0 0 rgba(0,0,0,.1);
   }
 }
 
 .button--default {
   composes: button;
   background-color: var(--red);
-  box-shadow: inset 0 -.15rem 0 0 var(--light-red);
+  box-shadow: inset 0 -.15em 0 0 var(--light-red);
   color: var(--white);
 }
 
@@ -33,7 +31,7 @@
   composes: button;
   background-color: transparent;
   color: var(--red);
-  box-shadow: inset 0 0 0 .1rem var(--red);
+  box-shadow: inset 0 0 0 .1em var(--red);
 
   &:hover, &:active {
     color: var(--white);
@@ -45,6 +43,10 @@
   padding: .1em;
   margin-left: -1.7em;
   margin-right: 1em;
+}
+
+.button:active .icon {
+  filter: drop-shadow(.2em 0 0 rgba(0,0,0,.1));
 }
 
 
