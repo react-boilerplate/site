@@ -31,6 +31,8 @@
 .content {
   padding: 3rem 2rem;
   flex-grow: 1;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .content, .nav {
