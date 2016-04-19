@@ -8,7 +8,7 @@
   -webkit-touch-callout: none;
   user-select: none;
   outline: 0;
-  font-family: 'Futura PT';
+  font-family: var(--heading-font);
   border-radius: 1em;
   cursor: pointer;
   transition: background-color 200ms ease-out, box-shadow 100ms ease-out;

@@ -12,7 +12,7 @@
 }
 
 .title {
-  font-family: 'Futura PT';
+  font-family: var(--heading-font);
   letter-spacing: .05rem;
   font-weight: normal;
   font-size: 1.2rem;
@@ -32,10 +32,12 @@
 }
 
 .code {
+  font-family: var(--code-font);
 	color: var(--white);
 }
 
 .codeBlock {
+  font-family: var(--code-font);
 	display: block;
 	font-size: .85em;
 	line-height: 1rem;

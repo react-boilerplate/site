@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  font-family: 'Tisa Sans Pro', Helvetica, Arial, sans-serif;
+  font-family: var(--body-font);
 }
 
 /*

@@ -5,4 +5,7 @@ module.exports = {
   'red': '#d77158',
   'light-red': '#f0af9f',
   'white': '#fafcff',
+  'heading-font': "'futura-pt', Helvetica, Arial, sans-serif",
+  'body-font': "'ff-tisa-sans-web-pro', Helvetica, Arial, sans-serif",
+  'code-font': "'source-code-pro', 'Courier New', Courier, monospace",
 }

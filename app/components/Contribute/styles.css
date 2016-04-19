@@ -9,7 +9,7 @@
   color: var(--red);
   font-size: 2rem;
   font-weight: normal;
-  font-family: 'Futura PT';
+  font-family: var(--heading-font);
   margin-bottom: 1rem;
 }
 
