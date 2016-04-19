@@ -1,8 +1,12 @@
+$section-width: 30rem;
+$section-padding: 2rem;
+
 .features {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  margin-top: 3rem;
+  justify-content: center;
+  max-width: calc($section-width * 2 + 2);
+  margin: 3rem auto 0;
 }
 
 .features h2 {
@@ -13,7 +17,7 @@
   text-align: center;
   font-family: 'Futura PT';
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -29,35 +33,39 @@
 .features h2:before { margin-right: 1rem; }
 .features h2:after { margin-left: 1rem; }
 
-.features section {
-  width: calc(50% - .5rem);
-  margin-bottom: 1rem;
-}
-
 .features h3 {
   display: flex;
   align-items: center;
   color: var(--blue);
-  font-size: 1.3rem;
+  font-size: 1.5em;
   font-family: 'Futura PT';
   font-weight: normal;
   margin-bottom: .75rem;
   margin-top: 1rem;
 }
 
-.features p {
-  font-size: .9rem;
-}
-
 .icon {
+  width: 2.25rem;
+  height: 2.25rem;
   color: var(--red);
   margin-right: .75rem;
 }
 
-@media (max-width: 700px) {
+.features section {
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: $section-width;
+  margin-bottom: 1rem;
+}
+
+
+@media (min-width: 40rem) {
   .features section {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    font-size: 1rem;
+    width: calc(50% - 1rem);
+    &:nth-child(2n-1) { margin-left: $section-padding; }
+    &:last-child:nth-child(2n) {
+      margin-right: auto;
+    }
   }
 }
