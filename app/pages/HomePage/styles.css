@@ -5,22 +5,27 @@
 }
 
 .header {
-  padding: 5rem;
+  padding: 5rem 2rem;
   font-size: 1.2rem;
   text-align: center;
   color: var(--blue);
-  background: url('./guilloche.svg?data-uri') center 15% / 55rem no-repeat,
+  background: url('./guilloche.svg?data-uri') center 15% / 57rem no-repeat,
               linear-gradient(to top, var(--light-blue), var(--white));
   box-shadow: inset 0 .75rem .75rem -.75rem rgba(0, 0, 0, .2),
               inset 0 -.75rem .75rem -.75rem rgba(0, 0, 0, .2);
 }
 
-.header svg {
+.logo {
   margin-bottom: 2rem;
   fill: var(--brown);
-  height: 5rem;
+  width: 100%;
+  max-width: 28rem;
 }
 
+.header p {
+  max-width: 25rem;
+  margin: 0 auto;
+}
 
 .nav {
   display: flex;

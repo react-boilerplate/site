@@ -38,7 +38,7 @@ export class HomePage extends React.Component {
           <Button outlined icon="book">Docs</Button>
         </nav>
         <header className={ styles.header }>
-          <Logo />
+          <Logo className={ styles.logo }/>
           <p>Quick setup for new performance orientated, offline–first React.js applications</p>
         </header>
         <article className={ styles.content }>
