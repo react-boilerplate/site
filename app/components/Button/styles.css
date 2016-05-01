@@ -2,7 +2,7 @@
   font-size: 1.1em;
   display: inline-flex;
   align-items: center;
-  padding: .3em 2em;
+  padding: .35em 2em;
   height: 2em;
   white-space: nowrap;
   text-decoration: none;
@@ -21,8 +21,7 @@
   }
 }
 
-.button--default {
-  composes: button;
+.button_default {
   padding-bottom: .35em; /* drop shadow changes apparent center of button */
   background-color: var(--red);
   box-shadow: inset 0 -.15em 0 0 var(--light-red);
@@ -30,8 +29,7 @@
   &:active { padding-bottom: .3em; }
 }
 
-.button--outlined {
-  composes: button;
+.button_outlined {
   background-color: transparent;
   color: var(--red);
   box-shadow: inset 0 0 0 .1em var(--red);
@@ -42,10 +40,26 @@
   }
 }
 
+@media (max-width: 30rem) {
+  .button_collapsable {
+    justify-content: center;
+    width: 2em;
+    padding: .35em 0;
+  }
+
+  .button_collapsable .text { display: none }
+
+  .button_collapsable .icon {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .icon {
   height: 100%;
+  width: auto;
   max-height: 2em;
-  margin-left: -1.7em;
+  margin-left: -1.5em;
   margin-right: 1em;
 }
 

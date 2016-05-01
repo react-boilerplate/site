@@ -37,7 +37,11 @@ function Icon({ type, className: userClassName }) {
   let classNames = [ styles.icon ]
   if (userClassName) classNames.push(userClassName)
   return React.createElement(iconMap[type], {
-    className: classNames.join(' ')
+    className: classNames.join(' '),
+    preserveAspectRatio: "xMaxYMax meet",
+    height: null,
+    width: null,
+    viewBox: '0 0 25 25'
   })
 }
 

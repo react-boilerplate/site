@@ -6,7 +6,7 @@
 
 .header {
   padding: 5rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   text-align: center;
   color: var(--blue);
   background: url('./guilloche.svg?data-uri') center 15% / 57rem no-repeat,
@@ -23,7 +23,7 @@
 }
 
 .header p {
-  max-width: 25rem;
+  max-width: 28rem;
   margin: 0 auto;
 }
 
@@ -31,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   padding: .75rem;
+  font-size: 1.15rem;
 }
 
 .content {

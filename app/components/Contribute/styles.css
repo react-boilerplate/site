@@ -3,6 +3,7 @@
   text-align: center;
   padding: 2rem;
   background-color: var(--light-blue);
+  font-size: 1.15rem;
 }
 
 .contribute h2 {
@@ -14,7 +15,6 @@
 }
 
 .contribute p {
-  font-size: 1.15rem;
   max-width: 45rem;
   margin: 1rem auto 1.5rem;
   text-align: left;
