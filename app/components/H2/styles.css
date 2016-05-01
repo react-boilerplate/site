@@ -1,5 +1,5 @@
 .heading2 {
-  font-family: 'Futura PT';
+  font-family: var(--heading-font);
   font-weight: normal;
   font-size: 1.5em;
 }

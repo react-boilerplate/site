@@ -10,16 +10,8 @@ export default function createRoutes(store) {
       path: '/',
       getComponent: function get(location, cb) {
         require.ensure([], (require) => {
-          injectAsyncReducer(store, 'home', require('HomePage/reducer').default);
           cb(null, require('HomePage').default);
         }, 'HomePage');
-      },
-    }, {
-      path: '/features',
-      getComponent: function get(location, cb) {
-        require.ensure([], (require) => {
-          cb(null, require('FeaturePage').default);
-        }, 'FeaturePage');
       },
     }, {
       path: '*',

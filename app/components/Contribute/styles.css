@@ -1,0 +1,22 @@
+.contribute {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--light-blue);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.contribute h2 {
+  color: var(--red);
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+}
+
+.contribute p {
+  max-width: 45rem;
+  margin: 1rem auto 1.5rem;
+  text-align: left;
+}

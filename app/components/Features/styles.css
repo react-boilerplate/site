@@ -1,0 +1,69 @@
+$section-width: 30rem;
+$section-padding: 2rem;
+
+.features {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 3rem auto 0;
+}
+
+.features h2 {
+  display: flex;
+  align-items: center;
+  color: var(--red);
+  width: 100%;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.features h2:after,
+.features h2:before {
+  display: block;
+  content: '';
+  flex-grow: 1;
+  height: .15rem;
+  background-color: var(--light-red);
+}
+
+.features h2:before { margin-right: 1rem; }
+.features h2:after { margin-left: 1rem; }
+
+.features h3 {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  font-size: 1.5em;
+  font-family: var(--heading-font);
+  font-weight: normal;
+  margin-bottom: .75rem;
+  margin-top: 1rem;
+}
+
+.icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--red);
+  margin-right: .75rem;
+}
+
+.features section {
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: $section-width;
+  margin-bottom: 1rem;
+}
+
+
+@media (min-width: 50rem) {
+  .features section {
+    width: calc(50% - 1rem);
+    &:nth-child(2n-1) { margin-left: $section-padding; }
+    &:last-child:nth-child(2n) {
+      margin-right: auto;
+    }
+  }
+}

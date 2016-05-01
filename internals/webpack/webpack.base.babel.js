@@ -32,8 +32,12 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
-      test: /\.jpe?g$|\.gif$|\.png$/i,
-      loader: 'url-loader?limit=10000',
+      test: /\.jpe?g$|\.gif$|\.png$|\.svgo?\?data-uri$/,
+      loader: 'url-loader',
+    }, {
+      test: /\.svg$/,
+      exclude: /node_modules/,
+      loader: 'babel!react-svg-loader',
     }, {
       test: /\.html$/,
       loader: 'html-loader',
@@ -49,7 +53,7 @@ module.exports = (options) => ({
   postcss: () => options.postcssPlugins,
   resolve: {
     modulesDirectories: [
-      'containers',
+      'pages',
       'components',
       'selectors',
       'sagas',

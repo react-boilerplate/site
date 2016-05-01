@@ -25,7 +25,7 @@ import configureStore from './store';
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
-import styles from './containers/App/styles.css';
+import styles from './pages/App/styles.css';
 const openSansObserver = new FontFaceObserver('Open Sans', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
@@ -35,8 +35,6 @@ openSansObserver.check().then(() => {
   document.body.classList.remove(styles.fontLoaded);
 });
 
-// Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
-import '../node_modules/sanitize.css/sanitize.css';
 
 // Create redux store with history
 // this uses the singleton browserHistory provided by react-router
@@ -48,9 +46,17 @@ const store = configureStore(initialState, browserHistory);
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
-import selectLocationSelector from 'selectLocationSelector';
+let prevRoutingState;
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: selectLocationSelector,
+  selectLocationState: (state) => {
+    const routingState = state.get('route');
+
+    if (!routingState.equals(prevRoutingState)) {
+      prevRoutingState = routingState;
+    }
+
+    return prevRoutingState.toJS();
+  },
 });
 
 // Set up the router, wrapping all Routes in the App component
@@ -63,7 +69,7 @@ const rootRoute = {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={useScroll(() => history)()} routes={rootRoute} />
+    <Router history={history} routes={rootRoute} />
   </Provider>,
   document.getElementById('app')
 );

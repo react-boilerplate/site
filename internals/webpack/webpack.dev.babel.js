@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
 const postcssReporter = require('postcss-reporter');
+const postcssVariables = require('postcss-advanced-variables');
+const cssConfig = require('../../app/css-config.js')
 
 module.exports = require('./webpack.base.babel')({
   // Add hot reloading in development
@@ -31,8 +33,17 @@ module.exports = require('./webpack.base.babel')({
   // Process the CSS with PostCSS
   postcssPlugins: [
     postcssFocus(), // Add a :focus to every :hover
+    postcssVariables(),
     cssnext({ // Allow future CSS features to be used, also auto-prefixes the CSS...
       browsers: ['last 2 versions', 'IE > 10'], // ...based on this browser list
+      features: {
+        customProperties: {
+          variables: cssConfig
+        },
+        calc: {
+          mediaQueries: true,
+        }
+      },
     }),
     postcssReporter({ // Posts messages from plugins to the terminal
       clearMessages: true,

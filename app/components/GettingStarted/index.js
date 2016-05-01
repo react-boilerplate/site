@@ -29,7 +29,7 @@ function GettingStarted() {
 						npm run start
 					</code>
 				</div>
-        <p className={ styles.closingStatement }>Now you can go to <code className={ styles.code }>http://localhost:3000</code> and see your app!</p>
+        <p className={ styles.closingStatement }>Now you can go to <code className={ styles.code }>localhost:3000</code> and see your app!</p>
       </div>
     </section>
   );
