@@ -18,7 +18,7 @@
 .logo {
   margin-bottom: 2rem;
   fill: var(--brown);
-  width: 100%;
+  width: 95%;
   max-width: 28rem;
 }
 
@@ -38,6 +38,7 @@
   padding: 3rem 2rem;
   flex-grow: 1;
   max-width: 60rem;
+  width: 100%;
   margin: 0 auto;
 }
 

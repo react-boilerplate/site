@@ -23,8 +23,8 @@ body {
  *    screen-space is still valuable and ctrl+ and ctrl- still work.
  */
 
-/* with a default font-size of 16px allow a minimum readable font-size of 13px */
-$base-font-size: 0.8125rem;
+/* with a default font-size of 16px allow a minimum readable font-size of 14px */
+$base-font-size: 0.875rem;
 $aspect-width: 50;
 $aspect-height: 40;
 $aspect-ratio: $aspect-width/$aspect-height;
