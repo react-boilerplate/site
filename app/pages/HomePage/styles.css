@@ -5,6 +5,7 @@
 }
 
 .header {
+  flex-shrink: 0;
   padding: 5rem 2rem;
   font-size: 1.35rem;
   text-align: center;
@@ -28,6 +29,7 @@
 }
 
 .nav {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   padding: .75rem;
@@ -37,9 +39,10 @@
 .content {
   padding: 3rem 2rem;
   flex-grow: 1;
+  flex-shrink: 0;
   max-width: 60rem;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto auto;
 }
 
 .content, .nav {

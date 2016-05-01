@@ -4,6 +4,7 @@
   padding: 2rem;
   background-color: var(--light-blue);
   font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .contribute h2 {
