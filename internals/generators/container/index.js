@@ -2,7 +2,6 @@
  * Container Generator
  */
 
-const fs = require('fs');
 const componentExists = require('../utils/componentExists');
 
 module.exports = {
@@ -28,54 +27,12 @@ module.exports = {
     type: 'confirm',
     name: 'wantActionsAndReducer',
     default: true,
-    message: 'Do you want an actions/constants/reducer tupel for this container?',
+    message: 'Do you want an actions/constants/selectors/reducer tupel for this container?',
   }, {
     type: 'confirm',
-    name: 'wantSelector',
+    name: 'wantSagas',
     default: true,
-    message: 'Do you want to select a part of the application state?',
-  }, {
-    type: 'list',
-    name: 'selectorType',
-    message: 'Select one option',
-    default: 'old',
-    choices: [
-      { name: 'Select from already available selectors', value: 'old' },
-      { name: 'Generate new one', value: 'new' },
-    ],
-    when: answers => answers.wantSelector,
-  }, {
-    type: 'checkbox',
-    name: 'selectors',
-    message: 'Choose the selectors that should be added (select with space)',
-    choices: fs.readdirSync('app/selectors').map(dir => ({ name: dir.slice(0, -3), value: dir.slice(0, -3) })),
-    validate: value => {
-      if (value.length > 0) {
-        return true;
-      }
-
-      return 'At least one selector must be selected';
-    },
-
-    when: answers => answers.selectorType === 'old',
-  }, {
-    type: 'input',
-    name: 'selectorName',
-    message: 'What the selector be called?',
-    default: 'form',
-    validate: value => {
-      if ((/.+selector/i).test(value)) {
-        return 'The name should not end in "-selector", we add that for you!';
-      }
-
-      if ((/.+/).test(value)) {
-        return true;
-      }
-
-      return 'The name is required';
-    },
-
-    when: answers => answers.selectorType === 'new',
+    message: 'Do you want sagas for asynchronous flows? (e.g. fetching data)',
   }],
   actions: data => {
     // Generate index.js and index.test.js
@@ -126,6 +83,20 @@ module.exports = {
         abortOnFail: true,
       });
 
+      // Selectors
+      actions.push({
+        type: 'add',
+        path: '../../app/containers/{{properCase name}}/selectors.js',
+        templateFile: './container/selectors.js.hbs',
+        abortOnFail: true,
+      });
+      actions.push({
+        type: 'add',
+        path: '../../app/containers/{{properCase name}}/tests/selectors.test.js',
+        templateFile: './container/selectors.test.js.hbs',
+        abortOnFail: true,
+      });
+
       // Reducer
       actions.push({
         type: 'add',
@@ -149,22 +120,22 @@ module.exports = {
         type: 'modify',
         path: '../../app/reducers.js',
         pattern: /(export default function createReducer)/gi,
-        template: 'import {{camelCase name}}Reducer from \'{{properCase name}}/reducer\';\n$1',
+        template: 'import {{camelCase name}}Reducer from \'containers/{{properCase name}}/reducer\';\n$1',
       });
     }
 
-    // Generate a new selector
-    if (data.selectorType === 'new') {
+    // Sagas
+    if (data.wantSagas) {
       actions.push({
         type: 'add',
-        path: '../../app/selectors/{{camelCase selectorName}}Selector.js',
-        templateFile: './container/selector.js.hbs', // Use our own selector.js.hbs template because the variable is selectorName
+        path: '../../app/containers/{{properCase name}}/sagas.js',
+        templateFile: './container/sagas.js.hbs',
         abortOnFail: true,
       });
       actions.push({
         type: 'add',
-        path: '../../app/selectors/tests/{{camelCase selectorName}}Selector.test.js',
-        templateFile: './selector/test.js.hbs',
+        path: '../../app/containers/{{properCase name}}/tests/sagas.test.js',
+        templateFile: './container/sagas.test.js.hbs',
         abortOnFail: true,
       });
     }

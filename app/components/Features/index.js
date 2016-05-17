@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-import Icon from 'Icon'
+import Icon from 'components/Icon'
 
 import styles from './styles.css';
 

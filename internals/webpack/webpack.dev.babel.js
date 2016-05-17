@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
 const postcssReporter = require('postcss-reporter');
-const postcssVariables = require('postcss-advanced-variables');
+const postcssVariables = require('postcss-advanced-variables')
 const cssConfig = require('../../app/css-config.js')
 
 module.exports = require('./webpack.base.babel')({
@@ -28,7 +28,7 @@ module.exports = require('./webpack.base.babel')({
   },
 
   // Load the CSS in a style tag in development
-  cssLoaders: 'style-loader!css-loader?localIdentName=[local]__[path][name]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
+  cssLoaders: 'style-loader!css-loader?localIdentName=[local]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
 
   // Process the CSS with PostCSS
   postcssPlugins: [
@@ -40,9 +40,6 @@ module.exports = require('./webpack.base.babel')({
         customProperties: {
           variables: cssConfig
         },
-        calc: {
-          mediaQueries: true,
-        }
       },
     }),
     postcssReporter({ // Posts messages from plugins to the terminal
