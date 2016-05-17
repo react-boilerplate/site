@@ -3,9 +3,19 @@
  */
 
 const path = require('path');
+const webpack = require('webpack');
+const modules = [
+  'app',
+  'node_modules',
+];
 
 module.exports = {
   devtool: 'inline-source-map',
+  isparta: {
+    babel: {
+      presets: ['es2015', 'react', 'stage-0'],
+    },
+  },
   module: {
     // Some libraries don't like being run through babel.
     // If they gripe, put them here.
@@ -39,6 +49,17 @@ module.exports = {
     ],
   },
 
+  plugins: [
+
+    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
+    // inside your code for any environment checks; UglifyJS will automatically
+    // drop any unreachable code.
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    })],
+
   // Some node_modules pull in Node-specific dependencies.
   // Since we're running in a browser we have to stub them out. See:
   // https://webpack.github.io/docs/configuration.html#node
@@ -54,18 +75,13 @@ module.exports = {
   // required for enzyme to work properly
   externals: {
     jsdom: 'window',
+    'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': 'window',
   },
   resolve: {
-    modulesDirectories: [
-      'containers',
-      'components',
-      'selectors',
-      'sagas',
-      'assets',
-      'node_modules',
-    ],
+    modulesDirectories: modules,
+    modules,
     alias: {
       // required for enzyme to work properly
       sinon: 'sinon/pkg/sinon',

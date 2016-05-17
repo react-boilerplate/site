@@ -32,13 +32,13 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
-      test: /\.jpe?g$|\.gif$|\.png$|\.svgo?\?data-uri$/,
-      loader: 'url-loader',
+			test: /\.jpe?g$|\.gif$|\.png$|\.svgo?\?data-uri$/,
+			loader: 'url-loader',
     }, {
-      test: /\.svg$/,
-      exclude: /node_modules/,
-      loader: 'babel!react-svg-loader',
-    }, {
+			test: /\.svg$/,
+			exclude: /node_modules/,
+			loader: 'babel!react-svg-loader',
+		}, {
       test: /\.html$/,
       loader: 'html-loader',
     }],
@@ -49,22 +49,28 @@ module.exports = (options) => ({
       // make fetch available
       fetch: 'exports?self.fetch!whatwg-fetch',
     }),
+
+    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
+    // inside your code for any environment checks; UglifyJS will automatically
+    // drop any unreachable code.
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
   ]),
   postcss: () => options.postcssPlugins,
   resolve: {
-    modulesDirectories: [
-      'pages',
-      'components',
-      'selectors',
-      'sagas',
-      'assets',
-      'node_modules',
-    ],
+    modules: ['app', 'node_modules'],
     extensions: [
       '',
       '.js',
       '.jsx',
       '.react.js',
+    ],
+    packageMains: [
+      'jsnext:main',
+      'main',
     ],
   },
   devtool: options.devtool,

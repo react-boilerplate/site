@@ -17,15 +17,15 @@ import 'file?name=[name].[ext]!./.htaccess';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
+import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
-import useScroll from 'scroll-behavior/lib/useScrollToTop';
+import useScroll from 'react-router-scroll';
 import configureStore from './store';
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
-import styles from './pages/App/styles.css';
+import styles from './containers/App/styles.css';
 const openSansObserver = new FontFaceObserver('Open Sans', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
@@ -46,30 +46,35 @@ const store = configureStore(initialState, browserHistory);
 // Sync history and store, as the react-router-redux reducer
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
-let prevRoutingState;
+import { selectLocationState } from './containers/App/selectors';
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: (state) => {
-    const routingState = state.get('route');
-
-    if (!routingState.equals(prevRoutingState)) {
-      prevRoutingState = routingState;
-    }
-
-    return prevRoutingState.toJS();
-  },
+  selectLocationState: selectLocationState(),
 });
 
 // Set up the router, wrapping all Routes in the App component
-import App from 'App';
+import App from './containers/App';
 import createRoutes from './routes';
 const rootRoute = {
   component: App,
   childRoutes: createRoutes(store),
 };
 
+
+// Scroll to top when going to a new page, imitating default browser
+// behaviour
+let renderer = applyRouterMiddleware(
+      useScroll(
+        (prevProps, props) => {
+          if (!prevProps || !props) return true;
+          if (prevProps.location.pathname !== props.location.pathname) return [0, 0];
+          return true;
+        }
+      )
+    )
+
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history} routes={rootRoute} />
+    <Router history={history} routes={rootRoute} render={renderer} />
   </Provider>,
   document.getElementById('app')
 );

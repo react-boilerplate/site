@@ -9,7 +9,7 @@
 import React from 'react';
 
 import styles from './styles.css';
-import Icon from 'Icon'
+import Icon from 'components/Icon'
 
 function Button(props) {
   let classNames = [ styles.button ]

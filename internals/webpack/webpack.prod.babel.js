@@ -8,8 +8,8 @@ const OfflinePlugin = require('offline-plugin');
 // PostCSS plugins
 const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
-const postcssVariables = require('postcss-advanced-variables');
 const postcssReporter = require('postcss-reporter');
+const postcssVariables = require('postcss-advanced-variables');
 const cssConfig = require('../../app/css-config.js')
 
 module.exports = require('./webpack.base.babel')({
@@ -37,13 +37,8 @@ module.exports = require('./webpack.base.babel')({
     postcssVariables(),
     cssnext({
       browsers: ['last 2 versions', 'IE > 10'],
-      features: {
-        customProperties: {
-          variables: cssConfig
-        },
-        calc: {
-          mediaQueries: true,
-        }
+      customProperties: {
+        variables: cssConfig
       },
     }),
     postcssReporter({
@@ -86,14 +81,6 @@ module.exports = require('./webpack.base.babel')({
 
     // Extract the CSS into a seperate file
     new ExtractTextPlugin('[name].[contenthash].css'),
-
-    // Set the process.env to production so React includes the production
-    // version of itself
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
 
     // Put it in the end to capture all the HtmlWebpackPlugin's
     // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
