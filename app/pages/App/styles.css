@@ -6,10 +6,6 @@ body {
   width: 100%;
 }
 
-body {
-  font-family: var(--body-font);
-}
-
 /*
  * Viewport-based Layout growth
  *
@@ -25,27 +21,42 @@ body {
 
 /* with a default font-size of 16px allow a minimum readable font-size of 14px */
 $base-font-size: 0.875rem;
-$aspect-width: 50;
-$aspect-height: 40;
-$aspect-ratio: $aspect-width/$aspect-height;
+$base-viewport-width: 58;
+$base-viewport-height: 67;
+$aspect-ratio: $base-viewport-width/$base-viewport-height;
 $growth-scaler: 0.3;
-$min-growth-width: calc($base-font-size * $aspect-width);
-$min-growth-height: calc($base-font-size * $aspect-height);
+$min-growth-width: calc($base-font-size * $base-viewport-width);
+$min-growth-height: calc($base-font-size * $base-viewport-height);
 
 :root {
   font-size: $base-font-size;
-  /* min-width: $min-growth-width; */
-  /* min-height: $min-growth-height; */
+  font-family: var(--body-font);
 
   @media (min-width: $min-growth-width) and (min-height: $min-growth-height) {
     @media (max-aspect-ratio: $aspect-ratio) {
-      font-size: calc($base-font-size + ((calc(100vw / $aspect-width) - $base-font-size) * $growth-scaler));
+      font-size: calc($base-font-size + ((calc(100vw / $base-viewport-width) - $base-font-size) * $growth-scaler));
     }
     @media (min-aspect-ratio: $aspect-ratio) {
-      font-size: calc($base-font-size + ((calc(100vh / $aspect-height) - $base-font-size) * $growth-scaler));
+      font-size: calc($base-font-size + ((calc(100vh / $base-viewport-height) - $base-font-size) * $growth-scaler));
     }
   }
 }
+
+
+/* DEBUG VIEWPORT */
+/*
+:root::before {
+  $width: calc(1em * $base-viewport-width);
+  $height: calc(1em * $base-viewport-height);
+  display: block;
+  content: '';
+  width: $width;
+  height: $height;
+  border: .5rem solid rgba(25%, 75%, 25%, .5);
+  position: absolute;
+  left: calc(50vw - ($width / 2));
+}
+*/
 
 :global #app {
   background-color: var(--white);
