@@ -13,7 +13,8 @@ import Button from 'Button';
 import GettingStarted from 'GettingStarted';
 import Features from 'Features';
 import Contribute from 'Contribute';
-import Logo from './react-boilerplate-logo.svg'
+import Supporters from 'Supporters';
+import Logo from './react-boilerplate-logo.svg';
 
 import styles from './styles.css';
 
@@ -38,12 +39,13 @@ export class HomePage extends React.Component {
           <Button icon="github-logo" outlined collapsable href="https://github.com/mxstbr/react-boilerplate">Source</Button>
         </nav>
         <header className={ styles.header }>
-          <Logo className={ styles.logo }/>
+          <Logo className={ styles.logo } />
           <p>Quick setup for new performance orientated, offline–first React.js applications</p>
         </header>
         <article className={ styles.content }>
           <GettingStarted />
           <Features />
+          <Supporters />
         </article>
         <Contribute />
       </main>

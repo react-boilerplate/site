@@ -1,5 +1,23 @@
 .heading2 {
+  display: flex;
+  align-items: center;
+  color: var(--red);
+  width: 100%;
+  text-align: center;
   font-family: var(--heading-font);
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
+
+.heading2:after,
+.heading2:before {
+  display: block;
+  content: '';
+  flex-grow: 1;
+  height: .15rem;
+  background-color: var(--light-red);
+}
+
+.heading2:before { margin-right: 1rem; }
+.heading2:after { margin-left: 1rem; }
