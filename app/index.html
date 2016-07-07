@@ -16,6 +16,25 @@
     <!-- Load Custom Fonts From Typekit -->
     <script src="https://use.typekit.net/brj3poa.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Analytics -->
+		<script type="text/javascript">
+		//<![CDATA[
+		var owa_baseUrl = 'http://analytics.mxstbr.com/';
+		var owa_cmds = owa_cmds || [];
+		owa_cmds.push(['setSiteId', 'cd9ee099b1b77b9891297355b3f0bdd0']);
+		owa_cmds.push(['trackPageView']);
+		owa_cmds.push(['trackClicks']);
+		owa_cmds.push(['trackDomStream']);
+
+		(function() {
+		var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+		owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+		_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+		var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+		}());
+		//]]>
+		</script>
 		<!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
 	</body>
 </html>
