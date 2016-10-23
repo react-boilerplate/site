@@ -20,10 +20,10 @@ body {
 
 /* with a default font-size of 16px allow a minimum readable font-size of 14px */
 $base-font-size: 0.875rem;
-$base-viewport-width: 58;
-$base-viewport-height: 67;
+$base-viewport-width: 50;
+$base-viewport-height: 60;
 $aspect-ratio: $base-viewport-width/$base-viewport-height;
-$growth-scaler: 0.3;
+$growth-scaler: 0.4;
 $min-growth-width: calc($base-font-size * $base-viewport-width);
 $min-growth-height: calc($base-font-size * $base-viewport-height);
 
