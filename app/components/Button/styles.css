@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 35rem) {
   .button_collapsable {
     justify-content: center;
     width: 2em;

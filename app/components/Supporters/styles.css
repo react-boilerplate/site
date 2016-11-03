@@ -4,3 +4,8 @@
   justify-content: center;
   margin: 3rem auto 0;
 }
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
