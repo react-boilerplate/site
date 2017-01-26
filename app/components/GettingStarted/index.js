@@ -16,7 +16,7 @@ function GettingStarted() {
       </header>
       <div className={ styles.content }>
 				<div className={ styles.steps }>
-					<p>Clone the boilerplate if you haven't downloaded it</p>
+					<p>Clone the boilerplate if you haven&apos;t downloaded it</p>
 					<code className={ styles.codeBlock }>
 						git clone https://github.com/react-boilerplate/react-boilerplate.git
 					</code>
