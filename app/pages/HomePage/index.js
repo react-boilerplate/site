@@ -34,9 +34,9 @@ export class HomePage extends React.Component {
     return (
       <main className={ styles.homePage }>
         <nav className={ styles.nav } >
-          <Button icon="download" outlined collapsable href="https://github.com/mxstbr/react-boilerplate/archive/master.zip">Download</Button>
-          <Button icon="book" href="https://github.com/mxstbr/react-boilerplate/tree/master/docs">Documentation</Button>
-          <Button icon="github-logo" outlined collapsable href="https://github.com/mxstbr/react-boilerplate">Source</Button>
+          <Button icon="download" outlined collapsable href="https://github.com/react-boilerplate/react-boilerplate/archive/master.zip">Download</Button>
+          <Button icon="book" href="https://github.com/react-boilerplate/react-boilerplate/tree/master/docs">Documentation</Button>
+          <Button icon="github-logo" outlined collapsable href="https://github.com/react-boilerplate/react-boilerplate">Source</Button>
         </nav>
         <header className={ styles.header }>
           <Logo className={ styles.logo } />

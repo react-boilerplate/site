@@ -58,6 +58,6 @@ The fix is to kill the process and rerun `npm start`.
 
 ## Have another question?
 
-Submit an [issue](https://github.com/mxstbr/react-boilerplate/issues),
+Submit an [issue](https://github.com/react-boilerplate/react-boilerplate/issues),
 hop onto the [Gitter channel](https://gitter.im/mxstbr/react-boilerplate)
 or contact Max direct on [twitter](https://twitter.com/mxstbr)!
