@@ -26,7 +26,7 @@ function GettingStarted() {
 					</code>
 					<p>And start the development server</p>
 					<code className={ styles.codeBlock }>
-						npm run start
+						npm start
 					</code>
 				</div>
         <p className={ styles.closingStatement }>Now you can go to <code className={ styles.code }>localhost:3000</code> and see your app!</p>
