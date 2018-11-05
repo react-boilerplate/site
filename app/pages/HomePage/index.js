@@ -40,7 +40,7 @@ export class HomePage extends React.Component {
         </nav>
         <header className={ styles.header }>
           <Logo className={ styles.logo } />
-          <p>Quick setup for new performance orientated, offline–first React.js applications</p>
+          <p>Quick setup for new performance oriented, offline–first React.js applications</p>
         </header>
         <article className={ styles.content }>
           <GettingStarted />
