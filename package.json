@@ -18,7 +18,7 @@
     "react-router": "^2.0.1",
     "react-router-redux": "^4.0.0",
     "redux": "^3.3.1",
-    "redux-immutable": "^3.0.6",
+    "redux-immutable": "^4.0.0",
     "redux-saga": "^0.9.5",
     "reselect": "^2.2.1",
     "sanitize.css": "^3.3.0",
