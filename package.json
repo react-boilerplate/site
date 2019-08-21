@@ -81,7 +81,7 @@
     "postcss-cssnext": "^2.5.1",
     "postcss-focus": "^1.0.0",
     "postcss-loader": "^0.8.0",
-    "postcss-reporter": "^1.3.0",
+    "postcss-reporter": "^6.0.1",
     "psi": "^2.0.2",
     "react-addons-test-utils": "^0.14.6",
     "react-svg-loader": "^1.0.0",
