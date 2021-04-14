@@ -45,7 +45,7 @@
     "enzyme": "^2.2.0",
     "eslint": "^2.0.0",
     "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-react": "^4.2.1",
+    "eslint-plugin-react": "^7.23.2",
     "eventsource-polyfill": "^0.9.6",
     "expect": "^1.13.4",
     "expect-jsx": "^2.2.2",
