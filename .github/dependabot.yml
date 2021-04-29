@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 6.10.3
+    - 7.22.0
+    - 7.23.1
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+  - dependency-name: autoprefixer
+    versions:
+    - 10.2.4
+    - 9.8.6
+  - dependency-name: sinon
+    versions:
+    - 9.2.4
+  - dependency-name: postcss-reporter
+    versions:
+    - 6.0.1
